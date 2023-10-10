@@ -2,7 +2,7 @@
 import turtle as trtl
 poo = 1
 painter = trtl.Turtle()
-while( 1 + poo == 2):
+while(1 + poo == 2):
     painter.penup()
     painter.goto(-200, 0)
     painter.pendown()
