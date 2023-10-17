@@ -14,10 +14,23 @@ spider.pensize(5)
 numberoflegs = 0
 # Draw the legs
 while (numberoflegs < legs):
-  spider.goto(0,20)
-  spider.setheading(spacing * numberoflegs)
-  spider.forward(LengthOfLegs)
-  numberoflegs = numberoflegs + 1
+    if (numberoflegs < 4):
+        spider.goto(0,20)
+        spider.setheading(spacing * numberoflegs * .5)
+        spider.forward(LengthOfLegs)
+        numberoflegs = numberoflegs + 1
+    else:
+        spider.goto(0, 20)
+        spider.setheading(spacing * numberoflegs * -.5)
+        spider.forward(LengthOfLegs)
+        numberoflegs = numberoflegs + 1
+# Create the eyes
+spider.pensize(10)
+spider.circle(5)
+spider.goto(0,  10)
+
+
+
 spider.hideturtle()
 wn = trtl.Screen()
 wn.mainloop()
